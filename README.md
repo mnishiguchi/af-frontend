@@ -1,5 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Thanks
+
+- [react ^16.8](https://reactjs.org/)
+- [facebook/create-react-app](https://github.com/facebook/create-react-app)
+- [react-router](https://github.com/ReactTraining/react-router)
+- [bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+- [reactstrap/reactstrap](https://reactstrap.github.io/)
+- [fkhadra/react-toastify](https://fkhadra.github.io/react-toastify/)
+- [FortAwesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
+- [jest-dom](https://github.com/gnapse/jest-dom)
+- [react-testing-library](https://github.com/kentcdodds/react-testing-library)
+- [etc](https://github.com/mnishiguchi/memory_game_2019/blob/master/package.json)
+
 ## Available Scripts
 
 In the project directory, you can run:
