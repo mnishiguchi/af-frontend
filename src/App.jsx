@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, NavLink as RouterNavLink, Switch } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -12,27 +13,36 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
-import { Col } from 'reactstrap';
 import { ToastContainer } from 'react-toastify';
 
 import './App.css';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 
 const App = () => {
   const [isOpen, updateIsOpen] = React.useState(false);
   const toggle = () => updateIsOpen(prev => !prev);
 
   return (
-    <div className="app">
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+    <Router>
+      <Navbar dark expand="md" style={{ backgroundColor: '#e66501' }}>
+        <NavbarBrand href="/">ApartmentFinding</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink tag={RouterNavLink} to="/about">
+                About
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink tag={RouterNavLink} to="/contact">
+                Contact
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/mnishiguchi/af-frontend">Repo</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -49,11 +59,11 @@ const App = () => {
         </Collapse>
       </Navbar>
 
-      <Col sm="12" md={{ size: 6, offset: 3 }}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate et nulla non, tempore a
-        molestias nesciunt velit. Nobis quibusdam ipsam deserunt vero at ex eos eveniet. Rerum
-        similique illo doloribus?
-      </Col>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={Contact} />
+      </Switch>
 
       <ToastContainer
         position="bottom-center"
@@ -66,7 +76,7 @@ const App = () => {
         draggable
         pauseOnHover
       />
-    </div>
+    </Router>
   );
 };
 
