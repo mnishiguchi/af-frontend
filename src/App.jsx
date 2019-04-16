@@ -15,10 +15,11 @@ import {
 } from 'reactstrap';
 import { ToastContainer } from 'react-toastify';
 
-import './App.css';
+import styles from './App.module.scss';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import NoMatch from './components/NoMatch';
 
 const App = () => {
   const [isOpen, updateIsOpen] = React.useState(false);
@@ -26,7 +27,7 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar dark expand="md" style={{ backgroundColor: '#e66501' }}>
+      <Navbar dark expand="md" className={styles.topnav}>
         <NavbarBrand href="/">ApartmentFinding</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -59,10 +60,12 @@ const App = () => {
         </Collapse>
       </Navbar>
 
+      {/* https://reacttraining.com/react-router/web/guides/quick-start */}
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
+        <Route component={NoMatch} />
       </Switch>
 
       <ToastContainer

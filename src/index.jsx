@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'react-toastify/dist/ReactToastify.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-import './index.css';
+import './scss/global.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

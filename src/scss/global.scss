@@ -1,0 +1,12 @@
+@import '~react-toastify/dist/ReactToastify.css';
+@import './global/bootstrap';
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #7ad5ec;
+  text-decoration: none;
+  cursor: pointer;
+}

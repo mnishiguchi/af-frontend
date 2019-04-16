@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [FortAwesome/react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
 - [jest-dom](https://github.com/gnapse/jest-dom)
 - [react-testing-library](https://github.com/kentcdodds/react-testing-library)
-- [etc](https://github.com/mnishiguchi/memory_game_2019/blob/master/package.json)
+- [etc](https://github.com/mnishiguchi/af-frontend/blob/master/package.json)
 
 ## Available Scripts
 

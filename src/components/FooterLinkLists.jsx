@@ -1,26 +1,28 @@
 import React from 'react';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import { Row, Col, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as shortid from 'shortid';
 
 const marketPlaceLinks = [
-  { linkName: 'Find Office Space', linkHref: '#!' },
-  { linkName: 'Find Industrial Space', linkHref: '#!' },
-  { linkName: 'Find a Business', linkHref: '#!' },
+  { linkName: 'Find Office Space', linkHref: shortid.generate() },
+  { linkName: 'Find Industrial Space', linkHref: shortid.generate() },
+  { linkName: 'Find a Business', linkHref: shortid.generate() },
 ];
 const neighborgoodLinks = [
-  { linkName: 'Downtown', linkHref: '#!' },
-  { linkName: 'Chinatown', linkHref: '#!' },
-  { linkName: 'Dupont Circle', linkHref: '#!' },
+  { linkName: 'Downtown', linkHref: shortid.generate() },
+  { linkName: 'Chinatown', linkHref: shortid.generate() },
+  { linkName: 'Dupont Circle', linkHref: shortid.generate() },
 ];
 const cityLinks = [
-  { linkName: 'Washington, DC', linkHref: '#!' },
-  { linkName: 'Arlington, VA', linkHref: '#!' },
-  { linkName: 'Baltimore, MD', linkHref: '#!' },
+  { linkName: 'Washington, DC', linkHref: shortid.generate() },
+  { linkName: 'Arlington, VA', linkHref: shortid.generate() },
+  { linkName: 'Baltimore, MD', linkHref: shortid.generate() },
 ];
 const aboutUsLinks = [
-  { linkName: 'Company Info', linkHref: '#!' },
-  { linkName: 'Mobile Apps', linkHref: '#!' },
-  { linkName: 'Contact Us', linkHref: '#!' },
+  { linkName: 'Company Info', linkHref: shortid.generate() },
+  { linkName: 'Mobile Apps', linkHref: shortid.generate() },
+  { linkName: 'Contact Us', linkHref: shortid.generate() },
 ];
 
 const LinkList = ({ title = 'Links', links = [] }) => {
@@ -36,7 +38,11 @@ const LinkList = ({ title = 'Links', links = [] }) => {
       <Nav vertical>
         {links.map(({ linkName, linkHref }, i) => (
           <NavItem key={i}>
-            <NavLink href={linkHref} style={{ padding: '8px 0', fontSize: '14px' }}>
+            <NavLink
+              tag={RouterNavLink}
+              to={linkHref}
+              style={{ padding: '8px 0', fontSize: '14px' }}
+            >
               {linkName}
             </NavLink>
           </NavItem>

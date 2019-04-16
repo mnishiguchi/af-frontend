@@ -1,0 +1,17 @@
+@import '../scss/shared.scss';
+
+.headerContainer {
+  color: $white;
+  background-color: $app-theme-color;
+  text-align: center;
+  padding: 2rem 0
+}
+
+.headerText {
+  color: $white;
+}
+
+.bodyContainer {
+  min-height: 30vh;
+  margin: 1rem auto;
+}
